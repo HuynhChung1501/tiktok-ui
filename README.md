@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- Thư viện cài thêm -->
+
+1. customize-cra (https://www.npmjs.com/package/customize-cra)
+
+2. babel-plugin-module-resolver (https://github.com/tleunen/babel-plugin-module-resolver)
+
+3. fontAwesome-V6.4.0 (regular, solid) (https://fontawesome.com/docs/web/use-with/react/)
+
+    - font-icon
+
+4. Tippy (https://github.com/atomiks/tippyjs-react)
+    - Thư viện bật popper
