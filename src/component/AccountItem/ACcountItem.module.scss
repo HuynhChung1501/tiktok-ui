@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.info-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.03px;
+}
+.icon-check {
+    margin-left: 6px;
+    font-size: 1.4rem;
+    color: rgb(32, 213, 236);
+}
+
+.info-desc {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.161px;
+    color: rgba(22, 24, 35, 0.75);
+}

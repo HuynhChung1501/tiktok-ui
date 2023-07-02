@@ -21,8 +21,6 @@
         border-radius: var(--border-radius-search);
         height: var(--height-search);
         border: 1px solid transparent;
-        width: 500px;
-
         &:focus-within,
         &:hover {
             border-color: #c4c4c8;
@@ -68,4 +66,15 @@
             background-color: rgba(22, 24, 35, 0.12);
         }
     }
+}
+.search,
+.search-result {
+    width: 500px;
+}
+
+.search-title {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 1.4rem;
+    padding: 5px 12px;
+    font-weight: 600;
 }

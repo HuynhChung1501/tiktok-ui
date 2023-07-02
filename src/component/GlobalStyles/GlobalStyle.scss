@@ -3,6 +3,7 @@
 
 :root {
     --primary: #fe2c55;
+    --white: #fff;
 }
 
 * {
@@ -24,4 +25,8 @@ body {
 
 button {
     outline: none;
+}
+
+a[herf] {
+    text-decoration: none;
 }
