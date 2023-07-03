@@ -78,3 +78,15 @@
     padding: 5px 12px;
     font-weight: 600;
 }
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.btn-more {
+    cursor: pointer;
+    padding: 4px 8px;
+    background-color: transparent;
+    color: #161823;
+}

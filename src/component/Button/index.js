@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function Button({ children, to, href, type, smail = false, large = false, primary = false, outline = false, outline_primary = false, rounded = false, disabled = false, className, onClick, ...passProps }) {
+function Button({ children, to, href, type, smail = false, large = false, primary = false, outline = false, outline_primary = false, rounded = false, disabled = false, className, iconLeft, iconRight, onClick, ...passProps }) {
     let Comp = 'button';
     const props = {
         onClick,
@@ -42,7 +42,9 @@ function Button({ children, to, href, type, smail = false, large = false, primar
             })}
             {...props}
         >
+            {iconLeft && <span className={cx('icon')}>{iconLeft}</span>}
             <span>{children}</span>
+            {iconRight && <span className={cx('icon')}>{iconRight}</span>}
         </Comp >
     );
 }

@@ -3,8 +3,9 @@
     min-width: 100px;
     padding: 8px 16px;
     border: 1px solid transparent;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    gap: 8px;
     justify-content: center;
     font-weight: 700;
     background-color: var(--white);
@@ -58,4 +59,10 @@
 .large {
     min-width: 140px;
     padding: 14px 16px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
 }
