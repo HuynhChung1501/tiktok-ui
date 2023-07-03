@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import styles from './Header.module.scss';
-import images from '~/assets/images';
+// import images from '~/assets/images';
 import AccountItem from '~/component/AccountItem/index';
 import Button from '~/component/Button';
 
@@ -27,7 +27,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('container')}>
                 <a href="/">
-                    <img src={images.logo} alt="logo tiktok" width={118} height={42} />
+                    {/* <img src={images.logo1} alt="logo tiktok" width={118} height={42} /> */}
                 </a>
                 <Tippy
                     interactive={true}
@@ -56,7 +56,7 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('action')}>
-                    <Button type="primary">Login</Button>
+                    <Button primary>Login</Button>
                 </div>
             </div>
         </header>

@@ -14,6 +14,15 @@
 }
 
 //button style
+.outline {
+    border-color: rgba(22, 24, 35, 0.12);
+    color: #161823;
+    font-weight: 600;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
 .primary {
     color: var(--white);
     background-color: var(--primary);
@@ -22,13 +31,23 @@
     }
 }
 
-.outline-secondary {
-    border-color: rgba(22, 24, 35, 0.12);
-    color: rgba(22, 24, 35, 1);
-    font-weight: 600;
+.outline_primary {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: var(--white);
+
     &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
+        background-color: rgba(254, 44, 85, 0.06);
     }
+}
+
+.rounded {
+    border-radius: 999px;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 //button size
