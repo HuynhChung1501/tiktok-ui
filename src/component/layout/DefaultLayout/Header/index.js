@@ -19,6 +19,21 @@ const MENU_ITEMS = [
         id: 1,
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'Englist',
+        children: {
+            title: 'laguege',
+            data: [
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt'
+                }
+            ]
+        }
     },
     {
         id: 2,
@@ -42,6 +57,10 @@ function Header() {
             setsearchResult([]);
         }, 1000);
     }, []);
+
+    const handleMenuChange = (MenuItem) => {
+        console.log(MenuItem);
+    }
 
     return (
         <header className={cx('wrapper')}>
@@ -79,6 +98,7 @@ function Header() {
                     <Button >Upload</Button>
                     <Button primary >Login</Button>
                     <Menu
+                        onChange={handleMenuChange}
                         items={MENU_ITEMS}>
                         <button className={cx('btn-more')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} size='xl' />
