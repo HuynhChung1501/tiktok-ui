@@ -25,15 +25,15 @@ const MENU_ITEMS = [
                 {
                     type: 'laguege',
                     code: 'en',
-                    title: 'English'
+                    title: 'English',
                 },
                 {
                     type: 'laguege',
                     code: 'vn',
-                    title: 'Tiếng Việt'
-                }
-            ]
-        }
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
         id: 2,
@@ -46,9 +46,10 @@ const MENU_ITEMS = [
         icon: <FontAwesomeIcon icon={faKeyboard} />,
         title: 'keyboard shortcuts',
     },
-]
+];
 
 function Header() {
+    const currentlyLogged = false;
     const [searchResult, setsearchResult] = useState([]);
 
     useEffect(() => {
@@ -60,14 +61,12 @@ function Header() {
 
     const handleMenuChange = (MenuItem) => {
         console.log(MenuItem);
-    }
+    };
 
     return (
         <header className={cx('wrapper')}>
             <div className={cx('container')}>
-                <a href="/">
-                    {/* <img src={images.logo1} alt="logo tiktok" width={118} height={42} /> */}
-                </a>
+                <a href="/">{/* <img src={images.logo1} alt="logo tiktok" width={118} height={42} /> */}</a>
                 <Tippy
                     interactive={true}
                     visible={searchResult.length > 0}
@@ -94,17 +93,45 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('action')}>
-                    <Button >Upload</Button>
-                    <Button primary >Login</Button>
-                    <Menu
-                        onChange={handleMenuChange}
-                        items={MENU_ITEMS}>
-                        <button className={cx('btn-more')}>
-                            <FontAwesomeIcon icon={faEllipsisVertical} size='xl' />
-                        </button>
-                    </Menu>
-                </div>
+
+                {currentlyLogged ? (
+                    <div className={cx('current-user')}>
+                        <Button>Upload</Button>
+                        <Tippy
+                            interactive={true}
+                            visible
+                            render={(attrs) => (
+                                <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                                    <PopperWrapper>
+                                        <h4 className={cx('search-title')}>Acounts</h4>
+                                        <AccountItem />
+                                        <AccountItem />
+                                        <AccountItem />
+                                        <AccountItem />
+                                    </PopperWrapper>
+                                </div>
+                            )}
+                        >
+                            <img
+                                className={cx('header-avatar')}
+                                src="https://vapa.vn/wp-content/uploads/2022/12/anh-dai-dien-dep-001.jpg"
+                                alt="ảnh đại diện"
+                            />
+                        </Tippy>
+                    </div>
+                ) : (
+                    <>
+                        <div className={cx('action')}>
+                            <Button>Upload</Button>
+                            <Button primary>Login</Button>
+                            <Menu onChange={handleMenuChange} items={MENU_ITEMS}>
+                                <button className={cx('btn-more')}>
+                                    <FontAwesomeIcon icon={faEllipsisVertical} size="xl" />
+                                </button>
+                            </Menu>
+                        </div>
+                    </>
+                )}
             </div>
         </header>
     );

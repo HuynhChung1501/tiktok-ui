@@ -90,3 +90,16 @@
     background-color: transparent;
     color: #161823;
 }
+
+//logged
+.current-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
