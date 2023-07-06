@@ -17,6 +17,7 @@
     border-radius: var(--border-radius-search);
     height: var(--height-search);
     border: 1px solid transparent;
+    position: relative;
     &:focus-within,
     &:hover {
         border-color: #c4c4c8;
@@ -43,9 +44,27 @@
     }
 }
 
+.btn-loading,
 .btn-clear {
     border: none;
-    margin-right: 16px;
+    position: absolute;
+    top: 50%;
+    right: 68px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn-loading {
+    animation: Spinner 1s linear infinite;
+}
+
+@keyframes Spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 .btn-search {
