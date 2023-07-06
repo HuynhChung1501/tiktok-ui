@@ -14,7 +14,6 @@ const defaultFn = () => { }
 function Menu({ children, items = [], onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }])
     const current = history[history.length - 1]
-    console.log(current.data);
 
     const renderItem = () => {
         return current.data.map((item, index) => {
@@ -46,7 +45,6 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             )}
             onHide={() => setHistory(prev => prev.slice(0, 1))}
         >
-
             {children}
         </Tippy>
     );

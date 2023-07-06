@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary: #fe2c55;
@@ -19,7 +18,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'TikTokFont', sans-serif;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     color: var(--text-primary);
@@ -33,4 +32,39 @@ button {
 a[href] {
     text-decoration: none;
     color: var(--text-primary);
+}
+
+//font emmbeded
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Semibold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/fonts/TikTokFont-Bold.woff2');
+    font-weight: 700;
+}
+
+// tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 21px;
+        letter-spacing: 0.03px;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+        padding: 3px 0;
+    }
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        color: rgba(84, 84, 84, 0.92);
+    }
 }
