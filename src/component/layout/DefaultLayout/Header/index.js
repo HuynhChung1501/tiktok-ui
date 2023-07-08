@@ -79,7 +79,6 @@ const MENU_USER = [
         to: '/prifile',
         separate: true,
     },
-
 ]
 
 function Header() {
