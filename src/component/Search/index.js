@@ -44,6 +44,14 @@ function Search() {
             });
     }, [debounce]);
 
+    function onchangeInputSearch(e) {
+        const searchValue = e.target.value
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
+        return;
+    }
+
     function handleResetSearch() {
         setSearchValue('');
         setsearchResult([]);
@@ -81,9 +89,7 @@ function Search() {
                     placeholder="Tìm kiếm"
                     spellCheck={false}
                     onFocus={() => setShowResult(true)}
-                    onChange={(e) => {
-                        setSearchValue(e.target.value);
-                    }}
+                    onChange={onchangeInputSearch}
                 />
                 {!!searchValue && !loading && (
                     <button className={cx('btn-clear')} onClick={handleResetSearch}>
@@ -96,7 +102,9 @@ function Search() {
                     </button>
                 )}
 
-                <button className={cx('btn-search')}>
+                <button className={cx('btn-search')}
+                    onMouseDown={e => e.preventDefault()}
+                >
                     <FontAwesomeIcon icon={faMagnifyingGlass} size="xl" />
                 </button>
             </div>
