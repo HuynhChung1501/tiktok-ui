@@ -7,6 +7,7 @@ import { faCoins, faEarthAsia, faEllipsisVertical, faGear, faPlus, faRightToBrac
 
 import styles from './Header.module.scss';
 // import images from '~/assets/images';
+// import route from "~/component/config/routes";
 import Button from '~/component/Button';
 import Menu from '~/component/Menu';
 import { Inbox, Message } from '~/component/Icon';
@@ -91,7 +92,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('container')}>
-                <a href="/">{/* <img src={images.logo1} alt="logo tiktok" width={118} height={42} /> */}</a>
+                {/* <a href={route.home}><img src={images.logo} alt="logo tiktok" width={118} height={42} /></a> */}
                 <Search />
 
                 {currentlyLogged ? (
