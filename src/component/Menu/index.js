@@ -33,6 +33,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             interactive={true}
             delay={[0, 500]}
             placement="bottom-end"
+            hideOnClick={false}
             render={(attrs) => (
                 <div className={cx('menu')} tabIndex="-1" {...attrs}>
                     <PopperWrapper>
