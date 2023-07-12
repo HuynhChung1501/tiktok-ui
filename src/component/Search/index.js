@@ -14,7 +14,7 @@ import { useDebounce } from "~/hooks";
 const cx = classNames.bind(styles);
 
 function Search() {
-    const [searchResult, setsearchResult] = useState([]);
+    const [searchResult, setSearchResult] = useState([]);
     const [searchValue, setSearchValue] = useState('');
     const [showResult, setShowResult] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ function Search() {
 
     useEffect(() => {
         if (!debounce.trim()) {
-            setsearchResult([])
+            setSearchResult([])
             return;
         }
         setLoading(true);
@@ -36,7 +36,7 @@ function Search() {
                 },
             })
             .then((res) => {
-                setsearchResult(res.data.data);
+                setSearchResult(res.data.data);
                 setLoading(false);
             })
             .catch(() => {
@@ -54,11 +54,11 @@ function Search() {
 
     function handleResetSearch() {
         setSearchValue('');
-        setsearchResult([]);
+        setSearchResult([]);
         inputRef.current.focus();
     }
 
-    function handleHidenResult() {
+    function handleHiddenResult() {
         setShowResult(false);
     }
 
@@ -66,7 +66,7 @@ function Search() {
         <HeadlessTippy
             interactive={true}
             visible={showResult && searchResult.length > 0}
-            onClickOutside={handleHidenResult}
+            onClickOutside={handleHiddenResult}
             render={(attrs) => (
                 <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                     {

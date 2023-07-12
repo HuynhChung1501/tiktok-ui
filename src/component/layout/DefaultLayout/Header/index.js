@@ -33,6 +33,136 @@ const MENU_ITEMS = [
                     code: 'vn',
                     title: 'Tiếng Việt',
                 },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                }, {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'laguege',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'laguege',
+                    code: 'vn',
+                    title: 'Tiếng Việt',
+                },
+
             ],
         },
     },
