@@ -5,10 +5,9 @@ import styles from './menu.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 function Header({ title, onBack }) {
-
     return (
         <div className={cx('header')}>
             <button className={cx('btn-back')} onClick={onBack}>
@@ -22,6 +21,6 @@ function Header({ title, onBack }) {
 Header.prototype = {
     title: PropTypes.string,
     onBack: PropTypes.func,
-}
+};
 
 export default Header;

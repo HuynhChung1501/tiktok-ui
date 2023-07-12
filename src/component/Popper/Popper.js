@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
-function wrapper({ children }) {
+function Popper({ children }) {
     return <div className={cx('wrapper')}>{children}</div>;
 }
 
-wrapper.prototype = {
-    children: PropTypes.node.isRequired
-}
+Popper.prototype = {
+    children: PropTypes.node.isRequired,
+};
 
-export default wrapper;
+export default Popper;
