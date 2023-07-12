@@ -19,150 +19,15 @@ const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
-        title: 'Englist',
+        title: 'English',
         children: {
-            title: 'laguege',
+            title: 'langue',
             data: [
                 {
                     type: 'laguege',
                     code: 'en',
                     title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                }, {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'laguege',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'laguege',
-                    code: 'vn',
-                    title: 'Tiếng Việt',
-                },
-
+                }
             ],
         },
     },
