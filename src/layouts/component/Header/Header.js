@@ -2,14 +2,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional for styling
-import { faBookmark, faCircleQuestion, faKeyboard, faUser } from '@fortawesome/free-regular-svg-icons';
-import { faCoins, faEarthAsia, faEllipsisVertical, faGear, faPlus, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBookmark,
+    faCircleQuestion,
+    faKeyboard,
+    faUser,
+} from '@fortawesome/free-regular-svg-icons';
+import {
+    faCoins,
+    faEarthAsia,
+    faEllipsisVertical,
+    faGear,
+    faPlus,
+    faRightToBracket,
+} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import styles from './Header.module.scss';
-// import images from '~/assets/images';
-// import route from "~/component/config/routes";
+import images from '~/assets/images';
+import { publicRoutes } from '~/routes';
 import Button from '~/component/Button/Button';
-import Menu from '~/component/Menu/Menu';
+import Menu from '~/component/Menu';
 import { Inbox, Message } from '~/component/Icon/Icon';
 import Image from '~/component/Image';
 import Search from '~/component/Search/Search';
@@ -32,7 +45,7 @@ const MENU_ITEMS = [
                     type: 'Language',
                     code: 'en',
                     title: 'Tiếng Việt',
-                }
+                },
             ],
         },
     },
@@ -80,7 +93,7 @@ const MENU_USER = [
         to: '/prifile',
         separate: true,
     },
-]
+];
 
 function Header() {
     const currentlyLogged = true;
@@ -92,18 +105,30 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('container')}>
-                {/* <a href={route.home}><img src={images.logo} alt="logo tiktok" width={118} height={42} /></a> */}
+                <Link href={publicRoutes.home}>
+                    <img
+                        src={images.logo}
+                        alt="logo tiktok"
+                        width={118}
+                        height={42}
+                    />
+                </Link>
                 <Search />
 
                 {currentlyLogged ? (
                     <div className={cx('current-user')}>
-                        <Tippy content="Upload" >
-                            <Button outline iconLeft={<FontAwesomeIcon icon={faPlus} />}>Upload</Button>
+                        <Tippy content="Upload">
+                            <Button
+                                outline
+                                iconLeft={<FontAwesomeIcon icon={faPlus} />}
+                            >
+                                Upload
+                            </Button>
                         </Tippy>
-                        <Tippy content="Message" >
+                        <Tippy content="Message">
                             <Message />
                         </Tippy>
-                        <Tippy content="Upload" >
+                        <Tippy content="Upload">
                             <Inbox />
                         </Tippy>
                         <Menu onChange={handleMenuChange} items={MENU_USER}>
@@ -120,13 +145,16 @@ function Header() {
                         <Button primary>Login</Button>
                         <Menu onChange={handleMenuChange} items={MENU_ITEMS}>
                             <button className={cx('btn-more')}>
-                                <FontAwesomeIcon icon={faEllipsisVertical} size="xl" />
+                                <FontAwesomeIcon
+                                    icon={faEllipsisVertical}
+                                    size="xl"
+                                />
                             </button>
                         </Menu>
                     </div>
                 )}
             </div>
-        </header >
+        </header>
     );
 }
 

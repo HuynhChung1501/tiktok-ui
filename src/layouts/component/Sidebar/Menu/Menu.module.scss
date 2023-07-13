@@ -1,0 +1,21 @@
+.wrapper {
+    margin-bottom: 8px;
+}
+
+//menu item
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.icon {
+    width: 30px;
+}
+.menu-item-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: -0.028px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

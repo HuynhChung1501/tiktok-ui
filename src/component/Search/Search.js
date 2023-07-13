@@ -2,15 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
-import { faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import {
+    faMagnifyingGlass,
+    faSpinner,
+} from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
 
-
 import styles from './search.module.scss';
-import { Wrapper as PopperWrapper } from '~/component/Popper';
+import { Popper as PopperWrapper } from '~/component/Popper';
 import AccountItem from '~/component/AccountItem';
-import { useDebounce } from "~/hooks";
-import * as searchServices from "~/services/searchService";
+import { useDebounce } from '~/hooks';
+import * as searchServices from '~/services/searchService';
 
 const cx = classNames.bind(styles);
 
@@ -21,26 +23,25 @@ function Search() {
     const [loading, setLoading] = useState(false);
 
     const inputRef = useRef();
-    const debounced = useDebounce(searchValue, 300)
+    const debounced = useDebounce(searchValue, 300);
 
     useEffect(() => {
         if (!debounced.trim()) {
-            setSearchResult([])
+            setSearchResult([]);
             return;
         }
 
         const fetApi = async () => {
-            setLoading(true)
-            const result = await searchServices.search(debounced)
+            setLoading(true);
+            const result = await searchServices.search(debounced);
             setSearchResult(result);
-            setLoading(false)
-        }
+            setLoading(false);
+        };
         fetApi();
-
     }, [debounced]);
 
     function onchangeInputSearch(e) {
-        const searchValue = e.target.value
+        const searchValue = e.target.value;
         if (!searchValue.startsWith(' ')) {
             setSearchValue(searchValue);
         }
@@ -73,8 +74,7 @@ function Search() {
                         </PopperWrapper>
                     }
                 </div>
-            )}
-        >
+            )}>
             <div className={cx('search')}>
                 <input
                     className={cx('input-search')}
@@ -87,19 +87,23 @@ function Search() {
                     onChange={onchangeInputSearch}
                 />
                 {!!searchValue && !loading && (
-                    <button className={cx('btn-clear')} onClick={handleResetSearch}>
+                    <button
+                        className={cx('btn-clear')}
+                        onClick={handleResetSearch}>
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
                 )}
                 {loading && (
-                    <button className={cx('btn-loading')} onClick={handleResetSearch}>
+                    <button
+                        className={cx('btn-loading')}
+                        onClick={handleResetSearch}>
                         <FontAwesomeIcon icon={faSpinner} />
                     </button>
                 )}
 
-                <button className={cx('btn-search')}
-                    onMouseDown={e => e.preventDefault()}
-                >
+                <button
+                    className={cx('btn-search')}
+                    onMouseDown={(e) => e.preventDefault()}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} size="xl" />
                 </button>
             </div>
