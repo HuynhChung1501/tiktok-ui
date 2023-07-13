@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './Sidebar.module.scss';
 import Menu, { MenuItem } from '~/layouts/component/Sidebar/Menu';
 import { HomeIcon, GroupUserIcon, LiveIcon, HomeIconActive, GroupUserIconActive, LiveIconActive } from '~/component/Icon';
+import SidebarAccount from './SidebarAccount/SidebarAccount';
 
 const cx = classNames.bind(styles);
 const Menu_Sidebar = [
@@ -46,6 +47,7 @@ function Sidebar() {
                     />
                 ))}
             </Menu>
+            <SidebarAccount />
         </aside>
     );
 }

@@ -14,7 +14,7 @@ function Image({ src = '', alt = ' ', fallback: customFallback = images.NoImage,
 
     return (
         <img
-            className={classNames(styles.wraper, className)}
+            className={classNames(styles.wrapper, className)}
             src={fallback || src}
             alt={alt}
             {...props}
