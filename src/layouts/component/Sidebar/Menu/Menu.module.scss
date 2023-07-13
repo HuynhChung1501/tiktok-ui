@@ -7,10 +7,24 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 8px;
+    color: var(--text-color);
+    border-radius: 4px;
+    transition: background ease-in-out 200ms;
+    &.active {
+        color: var(--primary);
+        .iconLeft {
+            display: none;
+        }
+        .iconLeftACtive {
+            display: flex;
+        }
+    }
+    &:hover {
+        background-color: #16182308;
+    }
 }
-.icon {
-    width: 30px;
-}
+
 .menu-item-title {
     font-weight: 700;
     font-size: 1.8rem;
@@ -18,4 +32,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.iconLeft {
+    display: flex;
+}
+.iconLeftACtive {
+    display: none;
 }

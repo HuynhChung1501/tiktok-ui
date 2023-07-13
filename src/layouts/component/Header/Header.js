@@ -16,11 +16,11 @@ import {
     faPlus,
     faRightToBracket,
 } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import styles from './Header.module.scss';
-import images from '~/assets/images';
-import { publicRoutes } from '~/routes';
+// import images from '~/assets/images';
+// import { publicRoutes } from '~/routes';
 import Button from '~/component/Button/Button';
 import Menu from '~/component/Menu';
 import { Inbox, Message } from '~/component/Icon/Icon';
@@ -105,14 +105,14 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('container')}>
-                <Link href={publicRoutes.home}>
+                {/* <Link href={publicRoutes.home}>
                     <img
                         src={images.logo}
                         alt="logo tiktok"
                         width={118}
                         height={42}
                     />
-                </Link>
+                </Link> */}
                 <Search />
 
                 {currentlyLogged ? (
